@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+import App from './js/App';
+
 export default class Test_ReactNative_NativeModules extends Component {
   render() {
     return (
@@ -50,4 +52,5 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Test_ReactNative_NativeModules', () => Test_ReactNative_NativeModules);
+// AppRegistry.registerComponent('Test_ReactNative_NativeModules', () => Test_ReactNative_NativeModules);
+AppRegistry.registerComponent('Test_ReactNative_NativeModules', () => App);
