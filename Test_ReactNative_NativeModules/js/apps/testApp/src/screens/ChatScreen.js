@@ -78,7 +78,7 @@ export default class ChatScreen extends React.Component {
     };
     */
     // react-navigation@1.0.0-beta.9
-    static navigationOptions = ({ navigation }) => {
+    static navigationOptions = ({ navigation, screenProps }) => {
         const {state, setParams} = navigation;
         const {user} = state.params;
         return {
