@@ -13,6 +13,15 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* Test_ReactNative_NativeModulesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Test_ReactNative_NativeModulesTests.m */; };
+		074678041EB9E75300A6A334 /* libYuanXinBluetooth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 074678031EB9E74200A6A334 /* libYuanXinBluetooth.a */; };
+		0762A2CB1EBAC13E003753F6 /* TestRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762A2C61EBAC13E003753F6 /* TestRootViewController.m */; };
+		0762A2CC1EBAC13E003753F6 /* TestRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0762A2C71EBAC13E003753F6 /* TestRootViewController.xib */; };
+		0762A2CD1EBAC13E003753F6 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0762A2C91EBAC13E003753F6 /* TestTableViewController.m */; };
+		0762A2CE1EBAC13E003753F6 /* TestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0762A2CA1EBAC13E003753F6 /* TestTableViewController.xib */; };
+		07C1F99C1EBACCEB0009B9F8 /* TestBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C1F99A1EBACCEB0009B9F8 /* TestBluetoothViewController.m */; };
+		07C1F99D1EBACCEB0009B9F8 /* TestBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C1F99B1EBACCEB0009B9F8 /* TestBluetoothViewController.xib */; };
+		07C1F9BE1EBADA460009B9F8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C1F9BC1EBADA460009B9F8 /* NavigationController.m */; };
+		07C1F9BF1EBADA460009B9F8 /* NavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C1F9BD1EBADA460009B9F8 /* NavigationController.xib */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -25,7 +34,7 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2D02E4C21E0B4AEC006451C7 /* libRCTAnimation-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */; };
+		2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */; };
 		2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E881DF850E9000B6D8A /* libRCTLinking-tvOS.a */; };
 		2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E8C1DF850E9000B6D8A /* libRCTNetwork-tvOS.a */; };
@@ -80,6 +89,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Test_ReactNative_NativeModules;
+		};
+		074678021EB9E74200A6A334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 074677E51EB9E74200A6A334 /* YuanXinBluetooth.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 074677D91EB9E6BD00A6A334;
+			remoteInfo = YuanXinBluetooth;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -240,11 +256,24 @@
 		00E356EE1AD99517003FC87E /* Test_ReactNative_NativeModulesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test_ReactNative_NativeModulesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* Test_ReactNative_NativeModulesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test_ReactNative_NativeModulesTests.m; sourceTree = "<group>"; };
+		074677E51EB9E74200A6A334 /* YuanXinBluetooth.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YuanXinBluetooth.xcodeproj; path = "../node_modules/react-native-yuanxin-bluetooth/ios/YuanXinBluetooth/YuanXinBluetooth.xcodeproj"; sourceTree = "<group>"; };
+		0762A2C51EBAC13E003753F6 /* TestRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRootViewController.h; sourceTree = "<group>"; };
+		0762A2C61EBAC13E003753F6 /* TestRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TestRootViewController.m; sourceTree = "<group>"; tabWidth = 4; };
+		0762A2C71EBAC13E003753F6 /* TestRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestRootViewController.xib; sourceTree = "<group>"; };
+		0762A2C81EBAC13E003753F6 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		0762A2C91EBAC13E003753F6 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; tabWidth = 4; };
+		0762A2CA1EBAC13E003753F6 /* TestTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewController.xib; sourceTree = "<group>"; };
+		07C1F9991EBACCEB0009B9F8 /* TestBluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBluetoothViewController.h; sourceTree = "<group>"; };
+		07C1F99A1EBACCEB0009B9F8 /* TestBluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBluetoothViewController.m; sourceTree = "<group>"; };
+		07C1F99B1EBACCEB0009B9F8 /* TestBluetoothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestBluetoothViewController.xib; sourceTree = "<group>"; };
+		07C1F9BB1EBADA460009B9F8 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationController.h; path = Test_ReactNative_NativeModules/NavigationController.h; sourceTree = "<group>"; };
+		07C1F9BC1EBADA460009B9F8 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationController.m; path = Test_ReactNative_NativeModules/NavigationController.m; sourceTree = "<group>"; };
+		07C1F9BD1EBADA460009B9F8 /* NavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NavigationController.xib; path = Test_ReactNative_NativeModules/NavigationController.xib; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Test_ReactNative_NativeModules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test_ReactNative_NativeModules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Test_ReactNative_NativeModules/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Test_ReactNative_NativeModules/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Test_ReactNative_NativeModules/AppDelegate.m; sourceTree = "<group>"; tabWidth = 4; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Test_ReactNative_NativeModules/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Test_ReactNative_NativeModules/Info.plist; sourceTree = "<group>"; };
@@ -270,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074678041EB9E75300A6A334 /* libYuanXinBluetooth.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -289,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */,
-				2D02E4C21E0B4AEC006451C7 /* libRCTAnimation-tvOS.a in Frameworks */,
+				2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */,
 				2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */,
 				2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */,
 				2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */,
@@ -368,6 +398,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		074677E61EB9E74200A6A334 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				074678031EB9E74200A6A334 /* libYuanXinBluetooth.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0762A2C21EBAC13E003753F6 /* asset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = asset;
+			path = Test_ReactNative_NativeModules/asset;
+			sourceTree = "<group>";
+		};
+		0762A2C41EBAC13E003753F6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0762A2C51EBAC13E003753F6 /* TestRootViewController.h */,
+				0762A2C61EBAC13E003753F6 /* TestRootViewController.m */,
+				0762A2C71EBAC13E003753F6 /* TestRootViewController.xib */,
+				0762A2C81EBAC13E003753F6 /* TestTableViewController.h */,
+				0762A2C91EBAC13E003753F6 /* TestTableViewController.m */,
+				0762A2CA1EBAC13E003753F6 /* TestTableViewController.xib */,
+				07C1F9991EBACCEB0009B9F8 /* TestBluetoothViewController.h */,
+				07C1F99A1EBACCEB0009B9F8 /* TestBluetoothViewController.m */,
+				07C1F99B1EBACCEB0009B9F8 /* TestBluetoothViewController.xib */,
+			);
+			name = src;
+			path = Test_ReactNative_NativeModules/src;
+			sourceTree = "<group>";
+		};
+		0762A2CF1EBAC17B003753F6 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = libs;
+			path = Test_ReactNative_NativeModules/libs;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +463,12 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				07C1F9BB1EBADA460009B9F8 /* NavigationController.h */,
+				07C1F9BC1EBADA460009B9F8 /* NavigationController.m */,
+				07C1F9BD1EBADA460009B9F8 /* NavigationController.xib */,
+				0762A2C21EBAC13E003753F6 /* asset */,
+				0762A2CF1EBAC17B003753F6 /* libs */,
+				0762A2C41EBAC13E003753F6 /* src */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -419,7 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */,
-				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */,
+				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,6 +513,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				074677E51EB9E74200A6A334 /* YuanXinBluetooth.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -638,6 +716,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 074677E61EB9E74200A6A334 /* Products */;
+					ProjectRef = 074677E51EB9E74200A6A334 /* YuanXinBluetooth.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -683,6 +765,13 @@
 			fileType = archive.ar;
 			path = libRCTVibration.a;
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		074678031EB9E74200A6A334 /* libYuanXinBluetooth.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libYuanXinBluetooth.a;
+			remoteRef = 074678021EB9E74200A6A334 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
@@ -804,10 +893,10 @@
 			remoteRef = 5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		5E9157351DD0AC6500FF2AA8 /* libRCTAnimation-tvOS.a */ = {
+		5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libRCTAnimation-tvOS.a";
+			path = libRCTAnimation.a;
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -841,6 +930,10 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				0762A2CC1EBAC13E003753F6 /* TestRootViewController.xib in Resources */,
+				07C1F9BF1EBADA460009B9F8 /* NavigationController.xib in Resources */,
+				0762A2CE1EBAC13E003753F6 /* TestTableViewController.xib in Resources */,
+				07C1F99D1EBACCEB0009B9F8 /* TestBluetoothViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,7 +999,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				07C1F99C1EBACCEB0009B9F8 /* TestBluetoothViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				07C1F9BE1EBADA460009B9F8 /* NavigationController.m in Sources */,
+				0762A2CB1EBAC13E003753F6 /* TestRootViewController.m in Sources */,
+				0762A2CD1EBAC13E003753F6 /* TestTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
