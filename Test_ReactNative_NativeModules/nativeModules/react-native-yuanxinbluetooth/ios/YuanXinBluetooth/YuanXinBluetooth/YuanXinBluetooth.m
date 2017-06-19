@@ -220,6 +220,39 @@ RCT_EXPORT_MODULE(BlueToothModule);
     }
 }
 
+#pragma mark 获取蓝牙状态
+
+/**
+ *  获取蓝牙状态
+ */
+RCT_REMAP_METHOD(getBtState,
+                 getBtStateResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject) {
+    NSString *code = [[NSNumber numberWithInt:_bluetoothState] stringValue];
+    NSString *message = @"未知状态";
+    switch (_bluetoothState) {
+        case CBManagerStateUnsupported:
+            message = @"该设备不支持蓝牙功能,请检查系统设置";
+            break;
+        case CBManagerStateUnauthorized:
+            message = @"该设备蓝牙未授权,请检查系统设置";
+            break;
+        case CBManagerStatePoweredOff:
+            message = @"该设备尚未打开蓝牙,请在设置中打开";
+            break;
+        case CBManagerStatePoweredOn:
+            message = @"蓝牙已经成功开启";
+            break;
+        default:
+            break;
+    }
+    
+    if(resolve){
+        resolve(@{@"code": code,
+                  @"message": message});
+    }
+}
+
 #pragma mark 启动蓝牙
 /**
  *  启动蓝牙
