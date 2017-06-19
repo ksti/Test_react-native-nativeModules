@@ -1,0 +1,19 @@
+{
+  "name": "react-native-yuanxinbluetooth",
+  "version": "1.0.0",
+  "description": "this is a bluetooth plugs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jiaojunying",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "http://yxsource.sinooceanland.net/platform/react-native-yuanxinbluetooth.git"
+  },
+  "keywords": [
+    "react-native-yuanxinbluetooth"
+  ]
+
+}
