@@ -20,7 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSURL *jsCodeLocation;
-
+    
+    [[RCTBundleURLProvider sharedSettings] setDefaults];
+    [[RCTBundleURLProvider sharedSettings] setJsLocation:@"10.23.89.159"];
     jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 
     RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
@@ -36,7 +38,7 @@
     [self.window makeKeyAndVisible];
     
     // set native ViewController for test
-    [self setNativeViewControllerForTest];
+    //[self setNativeViewControllerForTest];
     
     return YES;
 }
