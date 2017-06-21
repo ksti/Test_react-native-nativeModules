@@ -44,6 +44,7 @@ typedef void (^OnDidWriteValueForCharacteristicAtChannel)(NSString *channel, CBC
 
 @property (nonatomic, readonly) BabyBluetooth *baby;
 @property (nonatomic, readonly) CBManagerState bluetoothState;
+@property(nonatomic, getter=isBabyInited) BOOL babyInited;
 
 #pragma mark -主设备状态更新回调
 

@@ -34,6 +34,7 @@
     return share;
 }
 
+// 懒加载
 - (BabyBluetooth *)baby {
     if (!baby) {
         //初始化BabyBluetooth 蓝牙库
@@ -44,6 +45,10 @@
         //baby.scanForPeripherals().begin();
     }
     return baby;
+}
+ 
+- (BOOL)isBabyInited {
+    return baby != nil;
 }
 
 - (instancetype)init

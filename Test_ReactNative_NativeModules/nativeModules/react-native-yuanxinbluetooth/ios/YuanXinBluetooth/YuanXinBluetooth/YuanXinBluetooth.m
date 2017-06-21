@@ -67,7 +67,7 @@
 
 @interface YuanXinBluetooth() {
     BluetoothManager *_bluetoothManager;
-    BabyBluetooth *_initBaby; // 仅用来判断是不是第一次初始化。。
+    BabyBluetooth *_initBaby; // 仅用来判断是不是第一次初始化。。(已废弃)
     NSMutableDictionary *_blockDict;
     CBManagerState _bluetoothState;
     NSArray *_peripheralsInfoArray;
@@ -292,7 +292,8 @@ RCT_REMAP_METHOD(startBt,
 // 启动蓝牙，包括处理第一次启动的情形，debug模式下reload时即使是初始化蓝牙也没有系统弹框，杀掉app倒是可以
 - (void)firstStartBluetoothWhenReject:(void (^)(NSString *code, NSString *message, NSError *error))reject {
     //BabyBluetooth *initBaby = _bluetoothManager.baby; // 懒加载
-    BOOL firstInitBaby = _initBaby == nil;
+    //BOOL firstInitBaby = _initBaby == nil; // 不能判断"reload"的情况：reload时，_initBaby为空，_bluetoothManager.baby 可能已经初始化过。。懒加载一个尴尬的地方就是不能用来判断是否为空。。
+    BOOL firstInitBaby = !_bluetoothManager.babyInited;
     if (!_bluetoothManager.baby) { // 懒加载
         if (reject) {
             reject(@"-1", @"蓝牙初始化失败！", nil);
@@ -300,7 +301,7 @@ RCT_REMAP_METHOD(startBt,
         return;
     }
     if (firstInitBaby) {
-        _initBaby = _bluetoothManager.baby;
+        //_initBaby = _bluetoothManager.baby; // 不用这种方式判断是否第一次初始化了
         // 等待5秒，
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
             if (_bluetoothState == CBManagerStatePoweredOff) {

@@ -29,6 +29,7 @@ export default class TestBluetoothScreen extends React.Component {
                     title="Chat with Lucy" />
                 <Button
                     onPress={() => {
+                        //
                         YuanXinBluetooth && YuanXinBluetooth.startBt().then((result) => {
                             console.log('start bluetooth:' + JSON.stringify(result));
                         }).catch((err) => {
@@ -112,6 +113,10 @@ export default class TestBluetoothScreen extends React.Component {
                     onPress={() => {
                         YuanXinBluetooth && YuanXinBluetooth.connectDev({
                             peripheral: '67D824DD-EB3F-4C9F-8F27-DACDE124D71E',
+                        }).then((result) => {
+                            console.log('connect:' + JSON.stringify(result));
+                        }).catch((err) => {
+                            console.log('connect error:' + err.message);
                         });
                     }}
                     title="connect" />
