@@ -34,4 +34,10 @@ export default class BlueTooth {
     static getPeripheralServices(peripheralUUID):Promise{
         return BlueToothModule.getPeripheralServices(peripheralUUID);
     }
+    static cancelConnection(peripheralUUID):Function{
+        BlueToothModule.cancelPeripheralConnection(peripheralUUID);
+    }
+    static cancelAllConnection():Function{
+        BlueToothModule.cancelAllPeripheralsConnection();
+    }
 }

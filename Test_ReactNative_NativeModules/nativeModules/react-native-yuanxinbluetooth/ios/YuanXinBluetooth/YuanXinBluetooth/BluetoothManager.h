@@ -130,6 +130,15 @@ typedef void (^OnDidWriteValueForCharacteristicAtChannel)(NSString *channel, CBC
  */
 - (void)connectPeripheral:(CBPeripheral *)currPeripheral withDiscoverSevices:(NSArray<CBUUID *> *)servicesToDiscover;
 
+/**
+ * 断开连接
+ */
+- (void)cancelPeripheralConnection:(CBPeripheral *)peripheral;
+/**
+ * 断开所有连接
+ */
+- (void)cancelAllPeripheralsConnection;
+
 #pragma mark -主设备自动重连外设
 
 /**

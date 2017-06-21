@@ -122,6 +122,16 @@ export default class TestBluetoothScreen extends React.Component {
                     title="connect" />
                 <Button
                     onPress={() => {
+                        YuanXinBluetooth && YuanXinBluetooth.cancelConnection('67D824DD-EB3F-4C9F-8F27-DACDE124D71E');
+                    }}
+                    title="cancel connection" />
+                <Button
+                    onPress={() => {
+                        YuanXinBluetooth && YuanXinBluetooth.cancelAllConnection();
+                    }}
+                    title="cancel all connection" />
+                <Button
+                    onPress={() => {
                         /**
                          *
                          {

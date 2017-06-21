@@ -607,7 +607,7 @@ RCT_EXPORT_METHOD(connectPeripheralWithIdentifier:(NSString *)UUIDString
     }
     if (peripheral) {
         // [CoreBluetooth] API MISUSE: Cancelling connection for unused peripheral <CBPeripheral: 0x1702ebb00, identifier = 67D824DD-EB3F-4C9F-8F27-DACDE124D71E, name = G_G, state = connecting>, Did you forget to keep a reference to it?
-        [self insertPeripheral:peripheral]; // 要先保持引用 peripheral，不然会立即释放
+        [self insertRetrievedPeripheral:peripheral]; // 要先保持引用 peripheral，不然会立即释放
         [self connectPeripheral:peripheral];
     } else {
         NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:@"无法连接到指定的外设", NSLocalizedDescriptionKey, @"失败原因：可能是找不到指定的外设", NSLocalizedFailureReasonErrorKey, @"恢复建议：可尝试先扫描再连接扫描到的指定外设",NSLocalizedRecoverySuggestionErrorKey,nil];
@@ -657,6 +657,29 @@ RCT_EXPORT_METHOD(connectPeripheralWithIdentifier:(NSString *)UUIDString
     [_blockDict removeObjectForKey:kConnectBtError];
     successBlock = nil;
     errorBlock = nil;
+}
+
+/**
+ * 断开所有连接
+ */
+RCT_EXPORT_METHOD(cancelAllPeripheralsConnection) {
+    //[_bluetoothManager.baby cancelAllPeripheralsConnection];
+    for (CBPeripheral *peripheral in _bluetoothManager.baby.findConnectedPeripherals) {
+        [_bluetoothManager AutoReconnectCancel:peripheral]; // 删除断开自动重连的外设
+        [_bluetoothManager.baby cancelPeripheralConnection:peripheral];
+    }
+}
+/**
+ * 断开连接
+ */
+RCT_EXPORT_METHOD(cancelPeripheralConnection:(NSString *)UUIDString) {
+    for (CBPeripheral *peripheral in _bluetoothManager.baby.findConnectedPeripherals) {
+        if ([peripheral.identifier.UUIDString isEqualToString:UUIDString]) {
+            [_bluetoothManager AutoReconnectCancel:peripheral]; // 删除断开自动重连的外设
+            [_bluetoothManager.baby cancelPeripheralConnection:peripheral];
+            break;
+        }
+    }
 }
 
 #pragma mark 获取外设提供的服务
@@ -1089,7 +1112,7 @@ RCT_EXPORT_METHOD(printerReceiptWriteContent:(NSArray<ReceiptInfo *> *)items
 }
 
 // 插入 peripheral 数据 (_retrievedPeripherals，只负责保存 CBPeripheral)
--(void)insertPeripheral:(CBPeripheral *)peripheral {
+-(void)insertRetrievedPeripheral:(CBPeripheral *)peripheral {
     if(peripheral && ![_retrievedPeripherals containsObject:peripheral]) {
         [_retrievedPeripherals addObject:peripheral];
     }
