@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "BabyBluetooth.h"
-#import "PeripheralInfo.h"
+#import "PeripheralServiceInfo.h"
 
 /**
  * block
@@ -21,7 +21,8 @@ typedef void (^OnDisconnectPeripheral)(CBCentralManager *central, CBPeripheral *
 @interface BluetoothPeripheralObject : NSObject
 
 @property(strong,nonatomic)BabyBluetooth *baby;
-@property __block NSMutableArray *services;
+@property __block NSMutableArray<PeripheralServiceInfo *> *servicesInfo;
+@property(strong,nonatomic)NSMutableArray<CBService *> *services;
 @property(strong,nonatomic)CBPeripheral *currPeripheral;
 @property(strong,nonatomic)NSString *currChannel;
 @property(strong,nonatomic)NSArray *servicesToDiscover;

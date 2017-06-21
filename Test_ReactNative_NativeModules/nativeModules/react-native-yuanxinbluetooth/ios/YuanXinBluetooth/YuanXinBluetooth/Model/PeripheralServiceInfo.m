@@ -1,14 +1,14 @@
 //
-//  PeripheralInfo.m
+//  PeripheralServiceInfo.m
 //  YuanXinBluetooth
 //
 //  Created by GJS on 2017/6/5.
 //  Copyright © 2017年 GJS. All rights reserved.
 //
 
-#import "PeripheralInfo.h"
+#import "PeripheralServiceInfo.h"
 
-@implementation PeripheralInfo
+@implementation PeripheralServiceInfo
 
 - (instancetype)init{
     return [self initWithDict:nil];

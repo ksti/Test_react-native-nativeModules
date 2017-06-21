@@ -1096,7 +1096,7 @@ RCT_EXPORT_METHOD(printerReceiptWriteContent:(NSArray<ReceiptInfo *> *)items
 - (NSArray *)getPeripheralServices {
     NSMutableArray *mArray = [NSMutableArray array];
     NSArray *discoveredServices = [_bluetoothManager getPeripheralServices];
-    for (PeripheralInfo *info in discoveredServices) {
+    for (PeripheralServiceInfo *info in discoveredServices) {
         NSArray *discoveredCharacteristics = info.characteristics;
         NSMutableArray *mCharacteristicsArray = [NSMutableArray array];
         for (CBCharacteristic *cha in discoveredCharacteristics) {

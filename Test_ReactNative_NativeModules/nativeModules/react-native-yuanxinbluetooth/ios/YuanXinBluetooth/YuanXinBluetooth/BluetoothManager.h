@@ -13,7 +13,7 @@
 #import "BluetoothCharacteristicObject.h"
 #import "MMReceiptManager.h"
 #import "MMQRCode.h"
-#import "PeripheralInfo.h"
+#import "PeripheralServiceInfo.h"
 #import "ReceiptInfo.h"
 
 #define Notification_DiscoverNewPeripheral @"DiscoverNewPeripheral"
@@ -176,14 +176,14 @@ typedef void (^OnDidWriteValueForCharacteristicAtChannel)(NSString *channel, CBC
 /**
  *  根据 UUIDString 查找 characteristic
  */
-- (CBCharacteristic *)findCharacteristicByUUIDString:(NSString *)characteristicUUID inDiscoveredServices:(NSArray<PeripheralInfo *> *)discoveredServices;
+- (CBCharacteristic *)findCharacteristicByUUIDString:(NSString *)characteristicUUID inDiscoveredServices:(NSArray<PeripheralServiceInfo *> *)discoveredServices;
 - (CBCharacteristic *)findCharacteristicByUUIDString:(NSString *)characteristicUUID;
 
 #pragma mark -主设备读取外设提供的服务、特征
 /**
  *  读取外设提供的服务、特征
  */
-- (NSArray<PeripheralInfo *> *)getPeripheralServices;
+- (NSArray<PeripheralServiceInfo *> *)getPeripheralServices;
 
 /**
  设置characteristic的notify

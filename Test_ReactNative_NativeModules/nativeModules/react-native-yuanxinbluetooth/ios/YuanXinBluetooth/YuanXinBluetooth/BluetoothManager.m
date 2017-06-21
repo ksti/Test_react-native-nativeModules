@@ -244,8 +244,8 @@
 }
 
 #pragma mark -读取已连接的外设提供的服务、特征
-- (NSArray<PeripheralInfo *> *)getPeripheralServices {
-    return [peripheralObject.services copy];
+- (NSArray<PeripheralServiceInfo *> *)getPeripheralServices {
+    return [peripheralObject.servicesInfo copy];
 }
 
 #pragma mark -订阅指定特征值的变化
@@ -489,8 +489,8 @@ characteristic:(CBCharacteristic *)characteristic
 }
 
 // 根据 UUIDString 查找 characteristic
-- (CBCharacteristic *)findCharacteristicByUUIDString:(NSString *)characteristicUUID inDiscoveredServices:(NSArray<PeripheralInfo *> *)discoveredServices {
-    for (PeripheralInfo *info in discoveredServices) {
+- (CBCharacteristic *)findCharacteristicByUUIDString:(NSString *)characteristicUUID inDiscoveredServices:(NSArray<PeripheralServiceInfo *> *)discoveredServices {
+    for (PeripheralServiceInfo *info in discoveredServices) {
         NSArray *discoveredCharacteristics = info.characteristics;
         for (CBCharacteristic *cha in discoveredCharacteristics) {
             if ([cha.UUID.UUIDString isEqualToString:characteristicUUID]) {

@@ -26,6 +26,7 @@
             _currChannel = channel;
         }
         self.services = [[NSMutableArray alloc]init];
+        self.servicesInfo = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -42,6 +43,7 @@
 
 // 清空数据
 - (void)clearData {
+    [self.servicesInfo removeAllObjects];
     [self.services removeAllObjects];
 }
 
@@ -156,27 +158,32 @@
 #pragma mark -插入 services 数据
 -(void)insertService:(CBService *)service{
     NSLog(@"搜索到服务:%@",service.UUID.UUIDString);
-    PeripheralInfo *info = [[PeripheralInfo alloc]init];
-    [info setServiceUUID:service.UUID];
-    [self.services addObject:info];
+    if (![self.services containsObject:service]) {
+        [self.services addObject:service]; // NSMutableArray<CBService *>
+        PeripheralServiceInfo *info = [[PeripheralServiceInfo alloc]init];
+        [info setServiceUUID:service.UUID];
+        [self.servicesInfo addObject:info]; // NSMutableArray<PeripheralServiceInfo *>
+    }
 }
 
 -(void)insertCharacteristicsFromService:(CBService *)service{
     int serviceIndex = -1;
-    for (int i=0;i<self.services.count;i++) {
-        PeripheralInfo *info = [self.services objectAtIndex:i];
+    for (int i=0;i<self.servicesInfo.count;i++) {
+        PeripheralServiceInfo *info = [self.servicesInfo objectAtIndex:i];
         if (info.serviceUUID == service.UUID) {
             serviceIndex = i;
             break;
         }
     }
     if (serviceIndex != -1) {
-        PeripheralInfo *info =[self.services objectAtIndex:serviceIndex];
+        PeripheralServiceInfo *info =[self.servicesInfo objectAtIndex:serviceIndex];
         for (int row=0;row<service.characteristics.count;row++) {
             CBCharacteristic *c = service.characteristics[row];
-            [info.characteristics addObject:c];
+            if (![info.characteristics containsObject:c]) {
+                [info.characteristics addObject:c];
+            }
         }
-        //PeripheralInfo *curInfo =[self.services objectAtIndex:serviceIndex];
+        //PeripheralServiceInfo *curInfo = [self.servicesInfo objectAtIndex:serviceIndex];
         //NSLog(@"%@",curInfo.characteristics);
     }
 }

@@ -1,5 +1,5 @@
 //
-//  PeripheralInfo.h
+//  PeripheralServiceInfo.h
 //  YuanXinBluetooth
 //
 //  Created by GJS on 2017/6/5.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@interface PeripheralInfo : NSObject
+@interface PeripheralServiceInfo : NSObject
 
 @property (nonatomic,strong) CBUUID *serviceUUID;
 @property (nonatomic,strong) NSMutableArray *characteristics;

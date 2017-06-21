@@ -23,7 +23,7 @@
 		070B31211EF37A3300823353 /* ReceiptInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B31201EF37A3300823353 /* ReceiptInfo.m */; };
 		070B31241EF37A6C00823353 /* RCTConvert+ReceiptInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B31231EF37A6C00823353 /* RCTConvert+ReceiptInfo.m */; };
 		070B31271EF37D3800823353 /* PrinterMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 070B31261EF37D3800823353 /* PrinterMode.m */; };
-		070CA8201EE534520038A9FE /* PeripheralInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CA81F1EE534520038A9FE /* PeripheralInfo.m */; };
+		070CA8201EE534520038A9FE /* PeripheralServiceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CA81F1EE534520038A9FE /* PeripheralServiceInfo.m */; };
 		070CA8261EE5496E0038A9FE /* BluetoothPeripheralObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CA8251EE5496E0038A9FE /* BluetoothPeripheralObject.m */; };
 		070CA8291EE558540038A9FE /* BluetoothCharacteristicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CA8281EE558540038A9FE /* BluetoothCharacteristicObject.m */; };
 		074677DE1EB9E6BD00A6A334 /* YuanXinBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 074677DD1EB9E6BD00A6A334 /* YuanXinBluetooth.m */; };
@@ -77,17 +77,17 @@
 		070B31231EF37A6C00823353 /* RCTConvert+ReceiptInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+ReceiptInfo.m"; sourceTree = "<group>"; };
 		070B31251EF37D3800823353 /* PrinterMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterMode.h; sourceTree = "<group>"; };
 		070B31261EF37D3800823353 /* PrinterMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrinterMode.m; sourceTree = "<group>"; };
-		070CA81E1EE534520038A9FE /* PeripheralInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeripheralInfo.h; sourceTree = "<group>"; };
-		070CA81F1EE534520038A9FE /* PeripheralInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeripheralInfo.m; sourceTree = "<group>"; };
-		070CA8241EE5496E0038A9FE /* BluetoothPeripheralObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothPeripheralObject.h; sourceTree = "<group>"; };
-		070CA8251EE5496E0038A9FE /* BluetoothPeripheralObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothPeripheralObject.m; sourceTree = "<group>"; };
-		070CA8271EE558540038A9FE /* BluetoothCharacteristicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothCharacteristicObject.h; sourceTree = "<group>"; };
+		070CA81E1EE534520038A9FE /* PeripheralServiceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PeripheralServiceInfo.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		070CA81F1EE534520038A9FE /* PeripheralServiceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PeripheralServiceInfo.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		070CA8241EE5496E0038A9FE /* BluetoothPeripheralObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BluetoothPeripheralObject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		070CA8251EE5496E0038A9FE /* BluetoothPeripheralObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BluetoothPeripheralObject.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		070CA8271EE558540038A9FE /* BluetoothCharacteristicObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BluetoothCharacteristicObject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		070CA8281EE558540038A9FE /* BluetoothCharacteristicObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothCharacteristicObject.m; sourceTree = "<group>"; };
 		074677D91EB9E6BD00A6A334 /* libYuanXinBluetooth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYuanXinBluetooth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		074677DC1EB9E6BD00A6A334 /* YuanXinBluetooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YuanXinBluetooth.h; sourceTree = "<group>"; };
-		074677DD1EB9E6BD00A6A334 /* YuanXinBluetooth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YuanXinBluetooth.m; sourceTree = "<group>"; };
-		074E96141ED6E841007DB0D0 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
-		074E96151ED6E841007DB0D0 /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothManager.m; sourceTree = "<group>"; };
+		074677DD1EB9E6BD00A6A334 /* YuanXinBluetooth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = YuanXinBluetooth.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		074E96141ED6E841007DB0D0 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BluetoothManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		074E96151ED6E841007DB0D0 /* BluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BluetoothManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +160,8 @@
 		070CA81A1EE534060038A9FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				070CA81E1EE534520038A9FE /* PeripheralInfo.h */,
-				070CA81F1EE534520038A9FE /* PeripheralInfo.m */,
+				070CA81E1EE534520038A9FE /* PeripheralServiceInfo.h */,
+				070CA81F1EE534520038A9FE /* PeripheralServiceInfo.m */,
 				070B311F1EF37A3300823353 /* ReceiptInfo.h */,
 				070B31201EF37A3300823353 /* ReceiptInfo.m */,
 				070B31251EF37D3800823353 /* PrinterMode.h */,
@@ -288,7 +288,7 @@
 				070B31211EF37A3300823353 /* ReceiptInfo.m in Sources */,
 				070AD25E1EC5509300E2A94F /* IGThermalSupport.m in Sources */,
 				070AD25A1EC5509300E2A94F /* BabyPeripheralManager.m in Sources */,
-				070CA8201EE534520038A9FE /* PeripheralInfo.m in Sources */,
+				070CA8201EE534520038A9FE /* PeripheralServiceInfo.m in Sources */,
 				070AD2591EC5509300E2A94F /* BabyOptions.m in Sources */,
 				074677DE1EB9E6BD00A6A334 /* YuanXinBluetooth.m in Sources */,
 				070AD2601EC5509300E2A94F /* MMQRCode.m in Sources */,
